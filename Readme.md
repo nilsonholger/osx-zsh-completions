@@ -8,8 +8,11 @@ complete auto completions.
 INSTALLATION
 ============
 Clone:
+
 	git clone git://github.com/nilsonholger/... .zsh/osx-zsh-completions
+
 Modify `.zshrc`:
+
 	fpath=(~/.zsh/osx-zsh-completions/ $fpath)
 	autoload -Uz compinit
 	compinit -d ~/.zcompdump
