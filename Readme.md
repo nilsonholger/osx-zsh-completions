@@ -2,8 +2,8 @@ OSX ZSH COMPLETIONS
 ===================
 Provides zsh completions for selected OSX commands. This repository's main
 purpose is to create quality auto completions, e.g. conditional flag aware
-presentation and selection of choices, as well as up to date and feature
-complete auto completions.
+presentation and selection of choices, as well as up-to-date and
+feature-complete auto completions.
 
 INSTALLATION
 ============
