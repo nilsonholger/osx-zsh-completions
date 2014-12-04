@@ -22,8 +22,7 @@
 #   -v: also print filename (automatic with -r and with multiple files)
 #   -x: attr_value is represented as a hex string for input and output
 
-local context state state_descr line extra
-typeset -A opt_args
+local extra
 local -a _xattr_options
 
 _xattr_options=(
