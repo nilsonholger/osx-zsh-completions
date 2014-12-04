@@ -1,26 +1,26 @@
 #compdef xattr
-#
 # zsh completion for OSX's xattr
 #
-# Copyright (C) 2012 nilsonholger@hyve.org
+# usage: xattr [-l] [-r] [-s] [-v] [-x] file [file ...]
+#        xattr -p [-l] [-r] [-s] [-v] [-x] attr_name file [file ...]
+#        xattr -w [-r] [-s] [-x] attr_name attr_value file [file ...]
+#        xattr -d [-r] [-s] attr_name file [file ...]
+#        xattr -c [-r] [-s] file [file ...]
 #
-# Permission is hereby granted, free of charge, to any person obtaining a copy
-# of this software and associated documentation files (the "Software"), to deal
-# in the Software without restriction, including without limitation the rights
-# to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-# copies of the Software, and to permit persons to whom the Software is
-# furnished to do so, subject to the following conditions:
+# The first form lists the names of all xattrs on the given file(s).
+# The second form (-p) prints the value of the xattr attr_name.
+# The third form (-w) sets the value of the xattr attr_name to the string attr_value.
+# The fourth form (-d) deletes the xattr attr_name.
+# The fifth form (-c) deletes (clears) all xattrs.
 #
-# The above copyright notice and this permission notice shall be included in
-# all copies or substantial portions of the Software.
-#
-# THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-# IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-# FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-# AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-# LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-# OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
-# THE SOFTWARE.
+# options:
+#   -h: print this help
+#   -l: print long format (attr_name: attr_value and hex output has offsets and
+#       ascii representation)
+#   -r: act recursively
+#   -s: act on the symbolic link itself rather than what the link points to
+#   -v: also print filename (automatic with -r and with multiple files)
+#   -x: attr_value is represented as a hex string for input and output
 
 local context state state_descr line extra
 typeset -A opt_args
